@@ -3,12 +3,59 @@
     "version": "3.0.0-beta.31.custom",
     "description": "legend-state",
     "sideEffects": false,
-    "private": true,
-    "main": "./index.js",
-    "module": "./index.mjs",
-    "types": "./index.d.ts",
+    "private": false,
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./sync": {
+            "types": "./dist/sync.d.ts",
+            "import": "./dist/sync.mjs",
+            "require": "./dist/sync.js"
+        },
+        "./react": {
+            "types": "./dist/react.d.ts",
+            "import": "./dist/react.mjs",
+            "require": "./dist/react.js"
+        },
+        "./react-native": {
+            "types": "./dist/react-native.d.ts",
+            "import": "./dist/react-native.mjs",
+            "require": "./dist/react-native.js"
+        },
+        "./react-web": {
+            "types": "./dist/react-web.d.ts",
+            "import": "./dist/react-web.mjs",
+            "require": "./dist/react-web.js"
+        },
+        "./trace": {
+            "types": "./dist/trace.d.ts",
+            "import": "./dist/trace.mjs",
+            "require": "./dist/trace.js"
+        },
+        "./babel": {
+            "types": "./dist/babel.d.ts",
+            "import": "./dist/babel.mjs",
+            "require": "./dist/babel.js"
+        },
+        "./react-reactive/*": "./dist/react-reactive/*",
+        "./as/*": "./dist/as/*",
+        "./config/*": "./dist/config/*",
+        "./helpers/*": "./dist/helpers/*",
+        "./persist-plugins/*": "./dist/persist-plugins/*",
+        "./sync-plugins/*": "./dist/sync-plugins/*",
+        "./react-hooks/*": "./dist/react-hooks/*"
+    },
     "files": [
-        "**"
+        "dist/**/*",
+        "*.ts",
+        "*.md",
+        "LICENSE"
     ],
     "engines": {
         "node": ">=16.6.0",
@@ -133,13 +180,13 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/LegendApp/legend-state.git"
+        "url": "git+https://github.com/FelipeFlamarini/legend-state.git"
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/LegendApp/legend-state/issues"
+        "url": "https://github.com/FelipeFlamarini/legend-state/issues"
     },
-    "homepage": "https://github.com/LegendApp/legend-state#readme",
+    "homepage": "https://github.com/FelipeFlamarini/legend-state#readme",
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
     },

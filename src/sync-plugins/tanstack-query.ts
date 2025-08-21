@@ -69,7 +69,7 @@ export function syncedQuery<
 
         // Update the Query options
         if (observer) {
-            observer.setOptions(options, { listeners: false });
+            observer.setOptions(options);
         }
     };
 

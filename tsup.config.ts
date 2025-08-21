@@ -58,6 +58,5 @@ export default defineConfig({
     dts: true,
     treeshake: true,
     splitting: false,
-    outDir: 'dist',
-    clean: false,
+    clean: true,
 });
